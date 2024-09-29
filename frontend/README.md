@@ -2,9 +2,7 @@
 
 A React application that combines user authentication with robust task management capabilities. This app includes features for user login, registration, Google login, and comprehensive task management with drag-and-drop functionality.
 
-## Backend Repository: https://github.com/Prakash030/Voosh_Assessment_Backend
-
-## Live URL: https://voosh-assessment-frontend.vercel.app/login
+## Live URL: https://voosh-aasessment.vercel.app/
 
 ## Features
 
@@ -27,15 +25,6 @@ A React application that combines user authentication with robust task managemen
 
 ### Clone the Repository
 Clone the repository from GitHub:
-
-```bash
-git clone https://github.com/Prakash030/Voosh_Assessment_frontend.git
-```
-### Change into the project directory:
-
-```bash
-cd Voosh_Assessment_frontend
-```
 
 ### Install Dependencies:
 ```bash

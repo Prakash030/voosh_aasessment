@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setUserInfo, clearUserInfo } from '../Utils/userActions';
 import { login, glogin } from '../Services';
 import { useNavigate } from 'react-router-dom';
-import {useGoogleLogin} from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
 
 
 
@@ -19,7 +19,7 @@ const Login = () => {
     const [password, setPassword] = useState('Prakash@1');
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-    
+
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -50,9 +50,9 @@ const Login = () => {
             setLoading(false);
         }
     }
-    const gloginnew = useGoogleLogin({onSuccess: handleGoogleLoginSuccess});
+    const gloginnew = useGoogleLogin({ onSuccess: handleGoogleLoginSuccess });
 
-    const handleLogin = async() => {
+    const handleLogin = async () => {
         setLoading(true);
 
         if (!email || !password) {
@@ -80,6 +80,10 @@ const Login = () => {
     return (
         <div className="flex flex-col justify-center items-center w-full h-[100vh] bg-[#282D2D] px-5">
 
+            <div className="bg-yellow-400 text-black px-4 py-3 rounded mb-4 max-w-3xl text-center">
+                <strong>Notice:</strong> The server may take up to 60 seconds to respond for the first time, as we are using a free service.
+            </div>
+
             <div
                 className={`xl:max-w-3xl ${"bg-black"
                     }  w-full p-5 sm:p-10 rounded-md`}
@@ -100,7 +104,7 @@ const Login = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        
+
                         <div className="relative w-full">
                             <input
                                 className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${"bg-[#302E30] text-white focus:border-white"
@@ -118,7 +122,7 @@ const Login = () => {
                                 {showPassword ? <FaEyeSlash /> : <FaEye />}
                             </button>
                         </div>
-                        <button className={`mt-5 tracking-wide font-semibold ${!loading ? "bg-[#E9522C]" : "bg-[#E9522C]/30"} text-gray-100 w-full py-4 rounded-lg ${!loading ? "hover:bg-[#E9522C]/90" :"hover:bg-[#E9522C]/30"} transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none`}
+                        <button className={`mt-5 tracking-wide font-semibold ${!loading ? "bg-[#E9522C]" : "bg-[#E9522C]/30"} text-gray-100 w-full py-4 rounded-lg ${!loading ? "hover:bg-[#E9522C]/90" : "hover:bg-[#E9522C]/30"} transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none`}
                             onClick={handleLogin}
                             disabled={loading}
                             data-testid="login-button"
@@ -127,7 +131,7 @@ const Login = () => {
                         </button>
                         <p className='text-center'>Or</p>
                         <button data-testid="google-login-button" className="mt-1 tracking-wide font-semibold bg-[#E9522C] text-gray-100 w-full py-4 rounded-lg hover:bg-[#E9522C]/90 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                            <span className="ml-3" onClick={()=>gloginnew()}>Login using Google</span>
+                            <span className="ml-3" onClick={() => gloginnew()}>Login using Google</span>
                         </button>
                         <p className="mt-6 text-xs text-gray-600 text-center">
                             Don't have an account?{" "}
@@ -138,7 +142,7 @@ const Login = () => {
                                 Register
                             </Link>
                         </p>
-                        
+
                     </div>
                 </div>
             </div>

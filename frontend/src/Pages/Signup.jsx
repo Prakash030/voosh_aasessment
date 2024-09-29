@@ -81,6 +81,9 @@ const Signup = () => {
 
     return (
         <div className="flex flex-col justify-center items-center w-full h-[100vh] bg-[#282D2D] px-5">
+            <div className="bg-yellow-400 text-black px-4 py-3 rounded mb-4 max-w-3xl text-center">
+                <strong>Notice:</strong> The server may take up to 60 seconds to respond for the first time, as we are using a free service.
+            </div>
 
             <div
                 className={`xl:max-w-3xl ${"bg-black"

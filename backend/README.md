@@ -2,8 +2,6 @@
 
 The Task Management API is a Node.js application that provides CRUD (Create, Read, Update, Delete) functionalities for managing tasks and user management features. Built with Express and MongoDB, this API allows users to create tasks, update their details, retrieve tasks for a specific user, and delete tasks. It also supports user registration and login, including Google authentication.
 
-### Frontend GitHub Link : https://github.com/Prakash030/Voosh_Assessment_Frontend
-
 
 ## Features
 
@@ -22,36 +20,30 @@ The Task Management API is a Node.js application that provides CRUD (Create, Rea
   ### Backend Live URL :
   
   ```bash
-  https://voosh-assessment-backend.onrender.com
+  https://voosh-aasessment.onrender.com/api/v1
 
 ## Installation
 
 To set up the project on your local machine, follow these steps:
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/Prakash030/Voosh_Assessment_Backend.git
-   cd your-repository
-
-2. **Install dependencies:**
+1. **Install dependencies:**
 
     ```bash
     npm install
 
-3. **Configure environment variables:**
+2. **Configure environment variables:**
 
     ```bash
     MONGODB_URI=mongodb://localhost:27017/taskdb
     PORT=3000
     JSON_WEB_TOKEN_SECRET=jsonToken
 
-4. **Running the Application**
+3. **Running the Application**
 
     ```bash
     npm start
 
-5. **Unit test**
+4. **Unit test**
 
     ```bash
     npm test
