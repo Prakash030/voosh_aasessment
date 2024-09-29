@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "@babel/preset-env",  // Transpile modern JavaScript
+    "@babel/preset-react" // Transpile JSX and React code
+  ],
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs" // Transform ES modules to CommonJS
+  ]
+}
